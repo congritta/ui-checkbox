@@ -1,0 +1,31 @@
+.Checkbox {
+  display: flex;
+  gap: var(--cui-inputs-horizontal-padding);
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.Checkbox > * {
+  flex-shrink: 0;
+}
+
+.checkboxIcon > svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .checkboxIcon > svg {
+    fill: #fff;
+  }
+}
+
+.Checkbox[class*='_isActive'] > .checkboxIcon > svg {
+  fill: var(--cui-accent-color-700);
+}
+
+.checkboxContents {
+  display: flex;
+  align-items: center;
+  min-height: 1.5em;
+}
